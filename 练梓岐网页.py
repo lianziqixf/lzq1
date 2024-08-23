@@ -1,8 +1,6 @@
 "'我的主页'"
-import time
 import streamlit as st
-import random
-page = st.sidebar.radio('我的首页',['我的游戏','我的题目','我的智慧词典','我的留言','我的随机摇人','我的设置'])
+page = st.sidebar.radio('我的首页',['我的游戏','我的题目','我的智慧词典','我的留言','我的设置'])
 def page1 ():
     '我的游戏'
     st.write('我的游戏')
@@ -125,15 +123,6 @@ def page4 ():
             message = message[:-1]
             f.write(message)
         st.write('已留言给作者')
-def page5 ():
-    '我的随机摇人'
-    st.text('随机摇人')
-    number = st.slider('选择人数', 2, 11, 2)
-    names = []
-    for i in range(number):
-        names.append(st.text_input('第' + str(i+1) +'人'))
-    random.shuffle(names)
-    st.write('被摇到的人：' + names[0])
 def page6 ():
     '我的设置'
     st.write('我的设置')
@@ -166,8 +155,6 @@ elif page == '我的智慧词典':
     page3()
 elif page == '我的留言':
     page4()
-elif page == '我的随机摇人':
-    page5()
 elif page == '我的设置':
     page6()
 #'python -m streamlit run C:\Users\Administrator\Desktop\链子其\练梓岐网页.py'    
