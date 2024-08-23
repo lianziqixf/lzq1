@@ -4,29 +4,27 @@ page = st.sidebar.radio('我的首页',['我的游戏','我的题目','我的智
 def page1 ():
     '我的游戏'
     st.write('我的游戏')
-    st.write('现代巷战1.0.exe')
-    exe_file_path = "现代巷战1.0.exe"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="现代巷战1.0.exe",  
-        mime="application/octet-stream"  )
-    st.write('现代巷战2.0.exe')
-    exe_file_path = "现代巷战2.0.exe"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="现代巷战2.0.exe",  
-        mime="application/octet-stream"  )
-    st.write('雪人集心（食品版）')
+    st.write('雪人集心（食品版）请把下列文件解压后的内容处于同一个目录下')
     exe_file_path = "雪人集心（食品版）.zip"  
     with open(exe_file_path, "rb") as file:  
         btn = st.download_button(  
         label="下载EXE文件",  
         data=file,  
         file_name="雪人集心（食品版）.zip",  
+        mime="application/zip"  )
+    exe_file_path = "雪人集心（食品版）2.zip"  
+    with open(exe_file_path, "rb") as file:  
+        btn = st.download_button(  
+        label="下载EXE文件",  
+        data=file,  
+        file_name="雪人集心（食品版）2.zip",  
+        mime="application/zip"  )
+    exe_file_path = "雪人集心（食品版）3.zip"  
+    with open(exe_file_path, "rb") as file:  
+        btn = st.download_button(  
+        label="下载EXE文件",  
+        data=file,  
+        file_name="雪人集心（食品版）3.zip",  
         mime="application/zip"  )
             
 def page2 ():
