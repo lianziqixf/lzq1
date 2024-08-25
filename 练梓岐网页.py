@@ -213,12 +213,15 @@ def page4 ():
     messages_lish = []
     if name and now_message:
         messages_lish.append(name + ':' + now_message + '1')
-        with open('leave_message.txt','a') as f:
+        with open('leave_message.txt','a',encoding='utf-8') as f:
             message = ''
             for i in messages_lish:
                 message += '\n' + i 
             message = message[:-1]
             f.write(message)
+        file = open('leave_message.txt', 'r',encoding='utf-8')  
+        content = file.read()
+        st.write(content)
         st.write('已留言给作者')
 def page6 ():
     '我的设置'
@@ -236,7 +239,7 @@ def page6 ():
         name = st.text_input('请问名字？')
     b = st.button('确定')
     if b:
-        with open('evaluates.txt','a') as f:
+        with open('evaluates.txt','a',encoding='utf-8') as f:
             f.write('\n' + name + '评价:' + pj)
             st.write('谢谢评价')
     m = st.text_input('输入密码可获得更多信息。')
