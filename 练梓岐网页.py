@@ -1,10 +1,14 @@
 "'我的主页'"
 import streamlit as st
+import datetime
 page = st.sidebar.radio('我的首页',['我的游戏','我的题目','我的智慧词典','我的留言','我的设置'])
 def page1 ():
     '我的游戏'
+    st.markdown(  """ <style>.stApp {background-color: rgb(250,200,200); } </style>""",  unsafe_allow_html=True  )  
     st.write('我的游戏')
     st.write('雪人集心（入门版）请把下列文件解压后的内容处于同一个目录下')
+    st.image("平板游戏3-1.png", use_column_width=True)  
+    st.image("平板游戏3-2.png", use_column_width=True)  
     exe_file_path = "雪人集心（入门版）1.zip"  
     with open(exe_file_path, "rb") as file:  
         btn = st.download_button(  
@@ -35,9 +39,11 @@ def page1 ():
         mime="application/zip"  )
         
     st.write('雪人集心（熟练版）请把下列文件解压后的内容处于同一个目录下')
+    st.image("平板游戏4-1.png", use_column_width=True)  
+    st.image("平板游戏4-2.png", use_column_width=True)  
     exe_file_path = "雪人集心（熟练版）1.zip"  
     with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
+        btn = st.download_button(   
         label="下载EXE文件",  
         data=file,  
         file_name="雪人集心（熟练版）1.zip",  
@@ -57,7 +63,9 @@ def page1 ():
         file_name="雪人集心（熟练版）3.zip",  
         mime="application/zip"  )
 
-        st.write('雪人集心（困难版）请把下列文件解压后的内容处于同一个目录下')
+    st.write('雪人集心（困难版）请把下列文件解压后的内容处于同一个目录下')
+    st.image("平板游戏2-1.png", use_column_width=True)  
+    st.image("平板游戏2-2.png", use_column_width=True)   
     exe_file_path = "雪人集心（困难版）1.zip"  
     with open(exe_file_path, "rb") as file:  
         btn = st.download_button(  
@@ -80,7 +88,7 @@ def page1 ():
         file_name="雪人集心（困难版）3.zip",  
         mime="application/zip"  )
 
-        st.write('雪人集心（困难分解版）请把下列文件解压后的内容处于同一个目录下')
+    st.write('雪人集心（困难分解版）请把下列文件解压后的内容处于同一个目录下')
     exe_file_path = "雪人集心（困难分解版）1.zip"  
     with open(exe_file_path, "rb") as file:  
         btn = st.download_button(  
@@ -103,7 +111,9 @@ def page1 ():
         file_name="雪人集心（困难分解版）3.zip",  
         mime="application/zip"  )
 
-        st.write('雪人集心（食品版）请把下列文件解压后的内容处于同一个目录下')
+    st.write('雪人集心（食品版）请把下列文件解压后的内容处于同一个目录下')
+    st.image("平板游戏6-1.png", use_column_width=True)  
+    st.image("平板游戏6-2.png", use_column_width=True)  
     exe_file_path = "雪人集心（食品版）.zip"  
     with open(exe_file_path, "rb") as file:  
         btn = st.download_button(  
@@ -128,6 +138,7 @@ def page1 ():
             
 def page2 ():
     '我的题目'
+    st.markdown(  """ <style>.stApp {background-color: rgb(250,250,200); } </style>""",  unsafe_allow_html=True  )  
     st.write("一.单选题")
     st.write('1.turtle库有哪一些功能？')
     dx1 = st.radio(' ',['  ','A.制作游戏','B.三维建模','C.绘制图案','D.分析数据'])
@@ -195,6 +206,7 @@ def page2 ():
         st.write('再想想')
 def page3 ():
     '我的智慧词典'
+    st.markdown(  """ <style>.stApp {background-color: rgb(200,250,200); } </style>""",  unsafe_allow_html=True  )  
     st.write('智慧词典')
     with open('words_space.txt','r',encoding='utf-8-sig') as f:
         words_lish = f.read().split('\n')
@@ -207,6 +219,7 @@ def page3 ():
     if word in words_dicts:
         st.write(words_dicts[word])
 def page4 ():
+    st.markdown(  """ <style>.stApp {background-color: rgb(230,230,250); } </style>""",  unsafe_allow_html=True  )  
     '我的留言'
     name = st.text_input('我是')
     now_message = st.text_input('想说的话')
@@ -216,12 +229,12 @@ def page4 ():
         with open('leave_message.txt','a',encoding='utf-8') as f:
             message = ''
             for i in messages_lish:
-                message += '\n' + i 
+                message += '\n' + str(datetime.datetime.now()) + '时' + i 
             message = message[:-1]
             f.write(message)
-        file = open('leave_message.txt', 'r',encoding='utf-8')  
-        content = file.read()
-        st.write(content)
+        with open('leave_message.txt','r',encoding='utf-8-sig') as f:
+            leave_message_lish = f.read().split('\n')
+        st.write(leave_message_lish)
         st.write('已留言给作者')
 def page6 ():
     '我的设置'
@@ -245,6 +258,22 @@ def page6 ():
     m = st.text_input('输入密码可获得更多信息。')
     if m == '1290':
         st.write('设计者:练梓岐')
+    elif m == '17129':
+        name = st.text_input('我是')
+        now_message = st.text_input('想说的话')
+        messages_lish_17129 = []
+        if name and now_message:
+            messages_lish_17129.append(name + ':' + now_message + '1')
+            with open('17129.txt','a',encoding='utf-8') as f:
+                message_17129 = ''
+                for i in messages_lish_17129:
+                    message_17129 += '\n' + str(datetime.datetime.now()) + '时' + i 
+                message_17129 = message_17129[:-1]
+                f.write(message_17129)
+            with open('17129.txt','r',encoding='utf-8-sig') as f:
+                leave_message_lish_17129 = f.read().split('\n')
+            st.write(leave_message_lish_17129)
+        
         
     
 if page == '我的游戏':
