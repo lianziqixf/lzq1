@@ -1,7 +1,7 @@
 "'我的主页'"
 import streamlit as st
 import datetime
-page = st.sidebar.radio('我的首页',['我的游戏','我的题目','我的智慧词典','我的留言','我的设置'])
+page = st.sidebar.radio('我的首页',['我的游戏','我的题目','我的智慧词典','我的RGB调色板','我的留言','我的设置'])
 def page1 ():
     '我的游戏'
     st.write('我的游戏（原创作品，侵权必究）')
@@ -267,8 +267,17 @@ def page4 ():
             f.write(message)
         with open('leave_message.txt','r',encoding='utf-8-sig') as f:
             leave_message_lish = f.read().split('\n')
+            leave_message_lish.reverse()
         st.write(leave_message_lish)
         st.write('已留言给作者')
+def page5 ():
+    '我的RGB调色板'
+    st.write('我的RGB调色板')
+    r = st.slider('red',255,0)
+    g = st.slider('green',255,0)
+    b = st.slider('bule',255,0)
+    color = f'rgb({r},{g},{b})'
+    st.markdown(f"""<style>.stApp {{background-color: {color};}}</style>""",unsafe_allow_html=True)  
 def page6 ():
     '我的设置'
     st.write('我的设置')
@@ -303,9 +312,10 @@ def page6 ():
                     message_17129 += '\n' + str(datetime.datetime.now()) + '时' + i 
                 message_17129 = message_17129[:-1]
                 f.write(message_17129)
-            with open('17129.txt','r',encoding='utf-8-sig') as f:
-                leave_message_lish_17129 = f.read().split('\n')
-            st.write(leave_message_lish_17129)
+            with open('17129.txt', 'r', encoding='utf-8-sig') as f:  
+                leave_message_lish_17129 = f.read().split('\n')  
+                leave_message_lish_17129.reverse()  
+            st.write(leave_message_lish_17129)  
         
         
     
@@ -317,6 +327,8 @@ elif page == '我的智慧词典':
     page3()
 elif page == '我的留言':
     page4()
+elif page == '我的RGB调色板':
+    page5()
 elif page == '我的设置':
     page6()
 #'python -m streamlit run C:\Users\Administrator\Desktop\链子其\练梓岐网页.py'    
