@@ -4,137 +4,170 @@ import datetime
 page = st.sidebar.radio('我的首页',['我的游戏','我的题目','我的智慧词典','我的留言','我的设置'])
 def page1 ():
     '我的游戏'
-    st.markdown(  """ <style>.stApp {background-color: rgb(250,200,200); } </style>""",  unsafe_allow_html=True  )  
-    st.write('我的游戏')
-    st.write('雪人集心（入门版）请把下列文件解压后的内容处于同一个目录下')
-    st.image("平板游戏3-1.png", use_column_width=True)  
-    st.image("平板游戏3-2.png", use_column_width=True)  
-    exe_file_path = "雪人集心（入门版）1.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（入门版）1.zip",  
-        mime="application/zip"  )
-    exe_file_path = "雪人集心（入门版）2.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（入门版）2.zip",  
-        mime="application/zip"  )
-    exe_file_path = "雪人集心（入门版）3.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（入门版）3.zip",  
-        mime="application/zip"  )
-    exe_file_path = "雪人集心（入门版）4.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（入门版）4.zip",  
-        mime="application/zip"  )
-        
-    st.write('雪人集心（熟练版）请把下列文件解压后的内容处于同一个目录下')
-    st.image("平板游戏4-1.png", use_column_width=True)  
-    st.image("平板游戏4-2.png", use_column_width=True)  
-    exe_file_path = "雪人集心（熟练版）1.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(   
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（熟练版）1.zip",  
-        mime="application/zip"  )
-    exe_file_path = "雪人集心（熟练版）2.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（熟练版）2.zip",  
-        mime="application/zip"  )
-    exe_file_path = "雪人集心（熟练版）3.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（熟练版）3.zip",  
-        mime="application/zip"  )
-
-    st.write('雪人集心（困难版）请把下列文件解压后的内容处于同一个目录下')
-    st.image("平板游戏2-1.png", use_column_width=True)  
-    st.image("平板游戏2-2.png", use_column_width=True)   
-    exe_file_path = "雪人集心（困难版）1.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（困难版）1.zip",  
-        mime="application/zip"  )
-    exe_file_path = "雪人集心（困难版）2.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（困难版）2.zip",  
-        mime="application/zip"  )
-    exe_file_path = "雪人集心（困难版）3.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（困难版）3.zip",  
-        mime="application/zip"  )
-
-    st.write('雪人集心（困难分解版）请把下列文件解压后的内容处于同一个目录下')
-    exe_file_path = "雪人集心（困难分解版）1.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（困难分解版）1.zip",  
-        mime="application/zip"  )
-    exe_file_path = "雪人集心（困难分解版）2.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（困难分解版）2.zip",  
-        mime="application/zip"  )
-    exe_file_path = "雪人集心（困难分解版）3.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（困难分解版）3.zip",  
-        mime="application/zip"  )
-
-    st.write('雪人集心（食品版）请把下列文件解压后的内容处于同一个目录下')
-    st.image("平板游戏6-1.png", use_column_width=True)  
-    st.image("平板游戏6-2.png", use_column_width=True)  
-    exe_file_path = "雪人集心（食品版）.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（食品版）.zip",  
-        mime="application/zip"  )
-    exe_file_path = "雪人集心（食品版）2.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（食品版）2.zip",  
-        mime="application/zip"  )
-    exe_file_path = "雪人集心（食品版）3.zip"  
-    with open(exe_file_path, "rb") as file:  
-        btn = st.download_button(  
-        label="下载EXE文件",  
-        data=file,  
-        file_name="雪人集心（食品版）3.zip",  
-        mime="application/zip"  )
+    st.write('我的游戏（原创作品，侵权必究）')
+    game = st.radio(' ',['雪人集心'])
+    st.write('  雪人集心是一个系列的游戏，有多个版本。在（入门版）（困难分解版）（困难版）以及（熟练版）前16关中，使用者仅需从标记‘1’物品上方或左方收集其即可。而其他版本还需触碰指定物品，图片将在该版本图片以下显示。')
+    if game == '雪人集心': 
+        st.markdown(  """ <style>.stApp {background-color: rgb(250,200,200); } </style>""",  unsafe_allow_html=True  )  
+        st.write('雪人集心（入门版）请把下列文件解压后的内容处于同一个目录下')
+        st.image("平板游戏3-1.png", use_column_width=True)  
+        st.image("平板游戏3-2.png", use_column_width=True)  
+        exe_file_path = "雪人集心（入门版）1.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（入门版）1.zip",  
+            mime="application/zip"  )
+        exe_file_path = "雪人集心（入门版）2.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（入门版）2.zip",  
+            mime="application/zip"  )
+        exe_file_path = "雪人集心（入门版）3.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（入门版）3.zip",  
+            mime="application/zip"  )
+        exe_file_path = "雪人集心（入门版）4.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（入门版）4.zip",  
+            mime="application/zip"  )
+            
+        st.write('雪人集心（熟练版）请把下列文件解压后的内容处于同一个目录下')
+        st.image("平板游戏4-1.png", use_column_width=True)  
+        st.image("平板游戏4-2.png", use_column_width=True)  
+        st.image("旗子.png",width=90)  
+        exe_file_path = "雪人集心（熟练版）1.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(   
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（熟练版）1.zip",  
+            mime="application/zip"  )
+        exe_file_path = "雪人集心（熟练版）2.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（熟练版）2.zip",  
+            mime="application/zip"  )
+        exe_file_path = "雪人集心（熟练版）3.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（熟练版）3.zip",  
+            mime="application/zip"  )
+    
+        st.write('雪人集心（困难版）请把下列文件解压后的内容处于同一个目录下')
+        st.image("平板游戏2-1.png", use_column_width=True)  
+        st.image("平板游戏2-2.png", use_column_width=True) 
+        exe_file_path = "雪人集心（困难版）1.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（困难版）1.zip",  
+            mime="application/zip"  )
+        exe_file_path = "雪人集心（困难版）2.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（困难版）2.zip",  
+            mime="application/zip"  )
+        exe_file_path = "雪人集心（困难版）3.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（困难版）3.zip",  
+            mime="application/zip"  )
+    
+        st.write('雪人集心（困难分解版）请把下列文件解压后的内容处于同一个目录下')
+        exe_file_path = "雪人集心（困难分解版）1.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（困难分解版）1.zip",  
+            mime="application/zip"  )
+        exe_file_path = "雪人集心（困难分解版）2.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（困难分解版）2.zip",  
+            mime="application/zip"  )
+        exe_file_path = "雪人集心（困难分解版）3.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（困难分解版）3.zip",  
+            mime="application/zip"  )
+    
+        st.write('雪人集心（食品版）请把下列文件解压后的内容处于同一个目录下')
+        st.image("平板游戏6-1.png", use_column_width=True)  
+        st.image("平板游戏6-2.png", use_column_width=True)  
+        st.image("钥匙.png",width=90)  
+        exe_file_path = "雪人集心（食品版）.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（食品版）.zip",  
+            mime="application/zip"  )
+        exe_file_path = "雪人集心（食品版）2.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（食品版）2.zip",  
+            mime="application/zip"  )
+        exe_file_path = "雪人集心（食品版）3.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（食品版）3.zip",  
+            mime="application/zip"  )
+    
+        st.write('雪人集心（工业版）请把下列文件解压后的内容处于同一个目录下')
+        st.image("平板游戏7-1.png", use_column_width=True)  
+        st.image("平板游戏7-2.png", use_column_width=True)  
+        st.image("箱子.png",width=90)  
+        exe_file_path = "雪人集心（工业版）1.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（工业版）1.zip",  
+            mime="application/zip"  )
+        exe_file_path = "雪人集心（工业版）2.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（工业版）2.zip",  
+            mime="application/zip"  )
+        exe_file_path = "雪人集心（工业版）3.zip"  
+        with open(exe_file_path, "rb") as file:  
+            btn = st.download_button(  
+            label="下载EXE文件",  
+            data=file,  
+            file_name="雪人集心（工业版）3.zip",  
+            mime="application/zip"  )
+    
+        st.write('敬请期待：雪人集心（春夏版）')
             
 def page2 ():
     '我的题目'
